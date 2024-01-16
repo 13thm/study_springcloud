@@ -1,7 +1,8 @@
 package org.example.springcloud.controller;
 
-import org.example.springcloud.entities.CommonResult;
-import org.example.springcloud.entities.Payment;
+
+import org.example.entities.CommonResult;
+import org.example.entities.Payment;
 import org.example.springcloud.service.PaymentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
@@ -21,7 +22,7 @@ public class PaymentController
 
     @PostMapping(value = "/payment/create")
 //    public CommonResult create(@RequestBody Payment payment)  // 加了 @RequestBody postman 就要 传raw的 json
-    public CommonResult create(Payment payment)
+    public CommonResult create(@RequestBody Payment payment)
     {
         int result = paymentService.create(payment);
         log.info("*****插入操作返回结果:" + result);

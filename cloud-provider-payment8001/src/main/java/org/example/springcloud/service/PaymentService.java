@@ -2,7 +2,8 @@ package org.example.springcloud.service;
 
 
 import org.apache.ibatis.annotations.Param;
-import org.example.springcloud.entities.Payment;
+import org.example.entities.Payment;
+
 
 /**
  * @auther zzyy
